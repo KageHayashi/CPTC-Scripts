@@ -20,7 +20,7 @@ else
 fi
 
 echo "[*] Starting Nmap scan for live hosts..."
-nmap -v0 -sn -n --open -oN hosts -T5 $1
+nmap -v0 -sS -n --open -oN hosts -T5 $1
 
 echo "[*] Cleaning up live hosts..."
 grep "for" hosts | cut -d " " -f 5 > live_hosts.txt
